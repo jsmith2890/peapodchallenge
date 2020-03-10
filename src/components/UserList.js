@@ -1,13 +1,19 @@
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {ScrollView, TouchableOpacity} from 'react-native';
 import {ListItem} from 'react-native-elements';
 
 const UserList = ({users}) => {
+  const navigation = useNavigation();
   return (
     <ScrollView>
       {users.map(user => {
         return (
-          <TouchableOpacity onPress={() => console.log('hi')} key={user.id}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('UserShow', {username: user.login})
+            }
+            key={user.id}>
             <ListItem
               roundAvatar
               title={user.login}
