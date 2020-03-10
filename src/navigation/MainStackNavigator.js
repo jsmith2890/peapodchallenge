@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import AllUsers from '../screens/AllUsers';
 import UserShow from '../screens/UserShow';
+import RepoShow from '../screens/RepoShow';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ function MainStackNavigator() {
           options={{title: 'Users'}}
         />
         <Stack.Screen name="UserShow" component={UserShow} />
+        <Stack.Screen name="RepoShow" component={RepoShow} />
       </Stack.Navigator>
     </NavigationContainer>
   );
