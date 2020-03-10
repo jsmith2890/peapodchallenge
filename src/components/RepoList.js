@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const RepoList = ({user}) => (
+const RepoList = ({repos}) => (
   <View>
     <Text>hiiiii</Text>
   </View>

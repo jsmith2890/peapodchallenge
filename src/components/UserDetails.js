@@ -1,9 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {StyleSheet, View, Image, Text} from 'react-native';
 
 const UserDetails = ({user}) => (
   <View>
-    <Text>hiiiii</Text>
+    <Image
+      source={{
+        uri: user.avatar_url,
+      }}
+    />
+    <View>
+      <Text> {user.name}</Text>
+      <Text>{user.login}</Text>
+      <Text>{user.location}</Text>
+    </View>
   </View>
 );
 
