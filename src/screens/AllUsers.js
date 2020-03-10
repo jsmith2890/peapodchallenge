@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, SafeAreaView, Text} from 'react-native';
-
+import UserList from '../components/UserList';
 class AllUsers extends Component {
   state = {
     users: [],
@@ -18,10 +18,9 @@ class AllUsers extends Component {
 
   render() {
     const {users} = this.state;
-    console.log(users);
     return (
       <SafeAreaView styles={styles.container}>
-        <Text>hiii</Text>
+        <UserList users={users} />
       </SafeAreaView>
     );
   }
