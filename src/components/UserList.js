@@ -10,9 +10,7 @@ const UserList = ({users}) => {
       {users.map(user => {
         return (
           <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('UserShow', {username: user.login})
-            }
+            onPress={() => navigation.push('UserShow', {username: user.login})}
             key={user.id}>
             <ListItem
               roundAvatar
